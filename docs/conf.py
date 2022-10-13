@@ -6,9 +6,9 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'example_project'
-copyright = '2022, example_bob'
-author = 'example_bob'
+project = 'test_project'
+copyright = '2022, test_mad'
+author = 'test_mad'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -36,3 +36,10 @@ lexers["php-annotations"] = PhpLexer(startinline=True, linenos=1)
 primary_domain = "php"
 
 master_doc = 'index'
+
+# Regenerate API docs via doxygen + doxyphp2sphinx
+import subprocess, os
+read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
+if read_the_docs_build:
+    subprocess.call(['doxygen', 'Doxyfile'])
+    subprocess.call(['doxyphp2sphinx', 'Test'])
