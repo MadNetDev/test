@@ -129,11 +129,14 @@ class babyclass extends myclass {
     }
     
     /**
-     * This always returns a myclass
-     * @param $paramie 
+     * Sort Title
+     * 
+     * Long Title info - This always returns a myclass and some other changes
+     * 
+     * @param $paramie222 
      * @return myclass 
      */
-    function parentfunc($paramie)
+    function parentfunc($paramie222)
     {
         return new myclass;
     }
