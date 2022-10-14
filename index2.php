@@ -90,8 +90,8 @@ class myclass {
     }
     
     /**
-     * Return a thingie based on $paramie
-     * @param boolean $paramie 
+     * Return a thingie based on $paramie and something else
+     * @param boolean $paramie some extra info
      * @return integer|babyclass
      */
     function parentfunc($paramie)
